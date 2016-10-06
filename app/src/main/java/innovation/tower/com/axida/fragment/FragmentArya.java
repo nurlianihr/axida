@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import id.innovation.tower.titrada.R;
+import innovation.tower.com.axida.activity.R;
 
 public class FragmentArya extends Fragment {
 	

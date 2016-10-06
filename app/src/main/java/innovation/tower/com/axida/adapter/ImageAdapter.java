@@ -6,9 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-
-import id.innovation.tower.titrada.R;
 import innovation.tower.com.axida.activity.MainActivity;
+import innovation.tower.com.axida.activity.R;
 
 /**
  * Created by yeha on 9/9/16.

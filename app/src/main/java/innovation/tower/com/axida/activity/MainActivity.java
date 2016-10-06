@@ -16,8 +16,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
-
-import id.innovation.tower.titrada.R;
 import innovation.tower.com.axida.adapter.NavDrawerListAdapter;
 import innovation.tower.com.axida.fragment.FragmentArya;
 import innovation.tower.com.axida.fragment.FragmentEka;

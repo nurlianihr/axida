@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.innovation.tower.titrada.R;
+import innovation.tower.com.axida.activity.R;
 import innovation.tower.com.axida.model.NavDrawerItem;
 
 

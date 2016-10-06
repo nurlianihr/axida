@@ -5,8 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import id.innovation.tower.titrada.R;
+import innovation.tower.com.axida.activity.R;
 import innovation.tower.com.axida.adapter.ImageAdapter;
 
 public class FragmentHome extends Fragment {

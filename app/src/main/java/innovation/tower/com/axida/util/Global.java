@@ -12,4 +12,5 @@ public class Global {
     public static final int FRAGMENT_PAKSI    = 3;
     public static final int FRAGMENT_ARYA     = 4;
     public static final int FRAGMENT_KAMUNING = 5;
+    public static final int SPLASH_TIME_OUT   = 2500;
 }
