@@ -26,7 +26,7 @@ public class FragmentRadar extends Fragment {//implements LocationListener {
     private FragmentRadarController fragmentRadarController;
     private Button btnClick;
     private View view;
-    
+
     public FragmentRadar(){
 
     }
