@@ -16,7 +16,7 @@ public class FragmentArya extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_arya, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_help, container, false);
          
         return rootView;
     }

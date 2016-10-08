@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/layout_navigation"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:visibility="gone"
+    >
+
+    <RelativeLayout
+        android:id="@+id/nav_locate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/side_padding"
+        android:layout_weight="1"
+        android:background="@color/navigation_selected"
+        >
+
+        <ImageView
+            android:id="@+id/ic_page_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Article"
+            android:layout_below="@+id/ic_page_locate"
+            android:textColor="@color/layout_white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/nav_text_size"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nav_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/side_padding"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/ic_page_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_communities"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TakePhoto"
+            android:layout_below="@+id/ic_page_history"
+            android:textColor="@color/layout_white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/nav_text_size"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nav_schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/side_padding"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/ic_page_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_people"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Gallery"
+            android:layout_below="@+id/ic_page_schedule"
+            android:textColor="@color/layout_white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/nav_text_size"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

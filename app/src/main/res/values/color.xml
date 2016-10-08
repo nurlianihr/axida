@@ -2,8 +2,12 @@
 <resources>
     <color name="list_item_title">#fff</color>
     <color name="list_background">#303030</color>
-    <color name="list_background_pressed">#992416</color>
+    <color name="list_background_presseded">#992416</color>
+    <color name="list_background_pressed">#959a66</color>
     <color name="list_divider">#272727</color>
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#c5c4c4</color>
+    <color name="colorBackgroundListBottom">#494b2d</color>
+    <color name="navigation_selected">#16395d</color>
+    <color name="layout_white">#FFFFF0</color>
 </resources>

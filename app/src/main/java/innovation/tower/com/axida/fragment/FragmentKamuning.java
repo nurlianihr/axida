@@ -17,7 +17,7 @@ public class FragmentKamuning extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_kamuning, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_setting, container, false);
          
         return rootView;
     }
