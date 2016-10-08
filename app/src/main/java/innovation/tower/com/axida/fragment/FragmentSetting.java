@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import innovation.tower.com.axida.activity.R;
 
-public class FragmentKamuning extends Fragment {
+public class FragmentSetting extends Fragment {
 	
-	public FragmentKamuning(){}
+	public FragmentSetting(){}
 	
 	
 	@Override

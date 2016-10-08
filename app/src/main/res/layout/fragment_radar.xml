@@ -24,22 +24,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"/>
 
-    <include
-        android:id="@+id/layout_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout="@layout/layout_navigation"
-        android:layout_weight="0.08"
-        />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/txtLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="78dp"
-        android:id="@+id/button" />
+    <!--<include-->
+        <!--android:id="@+id/layout_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout="@layout/layout_navigation"-->
+        <!--android:layout_weight="0.08"-->
+        <!--/>-->
 
 </RelativeLayout>
 

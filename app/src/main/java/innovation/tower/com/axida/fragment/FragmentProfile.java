@@ -8,15 +8,15 @@ import android.view.ViewGroup;
 
 import innovation.tower.com.axida.activity.R;
 
-public class FragmentArya extends Fragment {
+public class FragmentProfile extends Fragment {
 	
-	public FragmentArya(){}
+	public FragmentProfile(){}
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_help, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
          
         return rootView;
     }

@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import innovation.tower.com.axida.activity.R;
 
-public class FragmentEka extends Fragment {
+public class FragmentNotif extends Fragment {
 	
-	public FragmentEka(){}
+	public FragmentNotif(){}
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
