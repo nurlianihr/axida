@@ -30,5 +30,17 @@
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+    <!-- String Fragment Name-->
+    <string name="Radar">radar</string>
+    <string name="Event">event</string>
+    <string name="Notification">notification</string>
+    <string name="Profile">profile</string>
+    <string name="Help">help</string>
+    <string name="Setting">setting</string>
+
+    <!--String Navigation-->
+    <string name="Article">article</string>
+    <string name="Gallery">gallery</string>
+    <string name="TakePhoto">take a photo</string>
 
 </resources>

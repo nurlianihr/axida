@@ -5,6 +5,8 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -16,13 +18,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
+
 import innovation.tower.com.axida.adapter.NavDrawerListAdapter;
-import innovation.tower.com.axida.fragment.FragmentArya;
-import innovation.tower.com.axida.fragment.FragmentEka;
-import innovation.tower.com.axida.fragment.FragmentHome;
-import innovation.tower.com.axida.fragment.FragmentKamuning;
-import innovation.tower.com.axida.fragment.FragmentKartika;
-import innovation.tower.com.axida.fragment.FragmentPaksi;
+import innovation.tower.com.axida.fragment.FragmentHelp;
+import innovation.tower.com.axida.fragment.FragmentNotif;
+import innovation.tower.com.axida.fragment.FragmentRadar;
+import innovation.tower.com.axida.fragment.FragmentSetting;
+import innovation.tower.com.axida.fragment.FragmentEvent;
+import innovation.tower.com.axida.fragment.FragmentProfile;
 import innovation.tower.com.axida.model.NavDrawerItem;
 import innovation.tower.com.axida.util.Global;
 
@@ -30,18 +33,16 @@ public class MainActivity extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
-
 	// nav drawer title
 	private CharSequence mDrawerTitle;
-
 	// used to store app title
 	private CharSequence mTitle;
-
 	// slide menu items
 	private String[] navMenuTitles;
 	private TypedArray navMenuIcons;
     private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
+
 
 
 	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH) // min API
@@ -50,6 +51,22 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		initLayout();
+		initEvent();
+		initData();
+
+		if (savedInstanceState == null) {
+			// on first time display view for first nav item
+			displayView(0);
+		}
+	}
+
+	private void initLayout() {
+
+
+	}
+
+	private void initEvent() {
 		mTitle = mDrawerTitle = getTitle();
 
 		// load slide menu items
@@ -77,7 +94,7 @@ public class MainActivity extends Activity {
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
 		// Kamuning
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
-		
+
 
 		// Recycle the typed array
 		navMenuIcons.recycle();
@@ -91,8 +108,9 @@ public class MainActivity extends Activity {
 
 		// enabling action bar app icon and behaving it as toggle button
 
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-			getActionBar().setHomeButtonEnabled(true);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActionBar().setHomeButtonEnabled(true);
+		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4b4b4d")));
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, //nav menu toggle icon
@@ -113,16 +131,17 @@ public class MainActivity extends Activity {
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-		if (savedInstanceState == null) {
-			// on first time display view for first nav item
-			displayView(0);
-		}
+
+	}
+
+	private void initData() {
+
 	}
 
 	/**
 	 * Slide menu item click listener
 	 * */
-	private class SlideMenuClickListener implements
+	public class SlideMenuClickListener implements
 			ListView.OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -167,27 +186,28 @@ public class MainActivity extends Activity {
 	/**
 	 * Diplaying fragment view for selected nav drawer list item
 	 * */
-	private void displayView(int position) {
+	public void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
 		switch (position) {
 		case Global.FRAGMENT_HOME:
-			fragment = new FragmentHome();
+			fragment = new FragmentRadar();
 			break;
-			case Global.FRAGMENT_KARTIKA:
-			fragment = new FragmentKartika();
+			case Global.FRAGMENT_EVENT:
+			fragment = new FragmentEvent();
 			break;
-		case Global.FRAGMENT_EKA:
-			fragment = new FragmentEka();
+		case Global.FRAGMENT_NOTIF:
+			fragment = new FragmentNotif();
 			break;
-		case Global.FRAGMENT_PAKSI:
-			fragment = new FragmentPaksi();
+		case Global.FRAGMENT_PROFILE:
+			fragment = new FragmentProfile();
 			break;
-		case Global.FRAGMENT_ARYA:
-			fragment = new FragmentArya();
+		case Global.FRAGMENT_HELP:
+			fragment = new FragmentHelp();
 			break;
-		case Global.FRAGMENT_KAMUNING:
-			fragment = new FragmentKamuning();
+		case Global.FRAGMENT_SETTING:
+			fragment = new FragmentSetting();
+
 			break;
 
 		default:
@@ -204,6 +224,8 @@ public class MainActivity extends Activity {
 			mDrawerList.setSelection(position);
 			setTitle(navMenuTitles[position]);
 			mDrawerLayout.closeDrawer(mDrawerList);
+//			mDrawerList.setBackgroundColor(getResources(R.color.counter_text_color));
+
 		} else {
 			// error in creating fragment
 			Log.e("MainActivity", "Error in creating fragment");

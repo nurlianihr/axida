@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-    <!---->
-    <!--<TextView-->
-        <!--android:id="@+id/txtLabel"-->
-         <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:textSize="16dp"-->
-        <!--android:text="Home View"/>-->
-    <!---->
-    <!--<ImageView android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/txtLabel"-->
-        <!--android:src="@drawable/ic_home"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="10dp"/>-->
-    <!---->
+    <fragment
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-<!--</RelativeLayout>-->
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/grid_view"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:numColumns="auto_fit"
-    android:columnWidth="90dp"
-    android:horizontalSpacing="10dp"
-    android:verticalSpacing="10dp"
-    android:gravity="center"
-    android:stretchMode="columnWidth" >
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="16dp"
+        android:text="@string/Event"/>
 
-</GridView>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabel"
+        android:src="@drawable/ic_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <include
+        android:id="@+id/layout_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout="@layout/layout_navigation"
+        android:layout_weight="0.08"
+        />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp"
+        android:id="@+id/button" />
+
+</RelativeLayout>
+
