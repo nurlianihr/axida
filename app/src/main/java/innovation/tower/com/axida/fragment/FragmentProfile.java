@@ -8,16 +8,15 @@ import android.view.ViewGroup;
 
 import innovation.tower.com.axida.activity.R;
 
-public class FragmentKamuning extends Fragment {
+public class FragmentProfile extends Fragment {
 	
-	public FragmentKamuning(){}
-	
+	public FragmentProfile(){}
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_kamuning, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
          
         return rootView;
     }

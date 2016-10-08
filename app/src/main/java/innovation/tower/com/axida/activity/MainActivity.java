@@ -5,6 +5,8 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -17,12 +19,12 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
 import innovation.tower.com.axida.adapter.NavDrawerListAdapter;
-import innovation.tower.com.axida.fragment.FragmentArya;
-import innovation.tower.com.axida.fragment.FragmentEka;
+import innovation.tower.com.axida.fragment.FragmentHelp;
+import innovation.tower.com.axida.fragment.FragmentNotif;
 import innovation.tower.com.axida.fragment.FragmentHome;
-import innovation.tower.com.axida.fragment.FragmentKamuning;
-import innovation.tower.com.axida.fragment.FragmentKartika;
-import innovation.tower.com.axida.fragment.FragmentPaksi;
+import innovation.tower.com.axida.fragment.FragmentSetting;
+import innovation.tower.com.axida.fragment.FragmentEvent;
+import innovation.tower.com.axida.fragment.FragmentProfile;
 import innovation.tower.com.axida.model.NavDrawerItem;
 import innovation.tower.com.axida.util.Global;
 
@@ -93,6 +95,7 @@ public class MainActivity extends Activity {
 
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 			getActionBar().setHomeButtonEnabled(true);
+			getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#4b4b4d")));
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.drawable.ic_drawer, //nav menu toggle icon
@@ -175,19 +178,19 @@ public class MainActivity extends Activity {
 			fragment = new FragmentHome();
 			break;
 			case Global.FRAGMENT_KARTIKA:
-			fragment = new FragmentKartika();
+			fragment = new FragmentEvent();
 			break;
 		case Global.FRAGMENT_EKA:
-			fragment = new FragmentEka();
+			fragment = new FragmentNotif();
 			break;
 		case Global.FRAGMENT_PAKSI:
-			fragment = new FragmentPaksi();
+			fragment = new FragmentProfile();
 			break;
 		case Global.FRAGMENT_ARYA:
-			fragment = new FragmentArya();
+			fragment = new FragmentHelp();
 			break;
 		case Global.FRAGMENT_KAMUNING:
-			fragment = new FragmentKamuning();
+			fragment = new FragmentSetting();
 			break;
 
 		default:

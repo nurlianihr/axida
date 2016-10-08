@@ -8,15 +8,16 @@ import android.view.ViewGroup;
 
 import innovation.tower.com.axida.activity.R;
 
-public class FragmentEka extends Fragment {
+public class FragmentSetting extends Fragment {
 	
-	public FragmentEka(){}
+	public FragmentSetting(){}
+	
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
  
-        View rootView = inflater.inflate(R.layout.fragment_eka, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_setting, container, false);
          
         return rootView;
     }

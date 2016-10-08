@@ -22,7 +22,7 @@ public class FragmentHome extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_radar, container, false);
          
         return rootView;
 

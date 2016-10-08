@@ -4,6 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <!--Frame layout to Username Profile-->
+    <ImageView
+        android:id="@+id/frame_profile_username"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <!-- Framelayout to display Fragments -->
     <FrameLayout
         android:id="@+id/frame_container"
@@ -20,5 +27,5 @@
         android:divider="@color/list_divider"
         android:dividerHeight="1dp"        
         android:listSelector="@drawable/list_selector"
-        android:background="@color/list_background"/>
+        android:background="@color/list_background_presseda"/>
 </android.support.v4.widget.DrawerLayout>
