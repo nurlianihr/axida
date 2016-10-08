@@ -43,8 +43,6 @@ public class MainActivity extends Activity {
     private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 
-
-
 	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH) // min API
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
