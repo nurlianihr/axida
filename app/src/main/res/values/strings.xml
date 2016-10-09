@@ -43,4 +43,7 @@
     <string name="Gallery">gallery</string>
     <string name="TakePhoto">take a photo</string>
 
+    <string name="TabNew">New</string>
+    <string name="TabHot">Hot</string>
+
 </resources>

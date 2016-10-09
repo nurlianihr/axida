@@ -1,22 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/schedule_layout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-    <TextView
-        android:id="@+id/txtLabel"
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="16dp"
-        android:text="@string/Event"/>
-    
-    <ImageView android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLabel"
-        android:src="@drawable/ic_people"
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/image1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:id="@+id/imageView7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:text="NEW"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/button3"
+            android:background="@color/counter_text_bg"/>
+
+        <Button
+            android:layout_width="195dp"
+            android:layout_height="100dp"
+            android:text="HOT"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/counter_text_color"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_below="@+id/image1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_marginTop="38dp"
+        android:id="@+id/imageView9" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/imageView9"
+        android:layout_alignLeft="@+id/imageView9"
+        android:layout_alignStart="@+id/imageView9" />
+
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tabLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/side_padding"-->
+        <!--android:layout_marginRight="@dimen/side_padding"-->
+        <!--android:layout_marginTop="@dimen/side_padding"-->
+
+        <!--app:tabSelectedTextColor="@color/blue_component"-->
+        <!--app:tabTextColor="@color/layout_white"-->
+        <!--app:tabTextAppearance="@style/TabTextStyling"-->
+        <!--app:tabMaxWidth="0dp"-->
+        <!--app:tabGravity="fill"-->
+        <!--app:tabMode="fixed"-->
+        <!--app:tabBackground="@drawable/tab_color_selector"-->
+        <!--/>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/pager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+    
+    <!--<TextView-->
+        <!--android:id="@+id/txtLabel"-->
+         <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:textSize="16dp"-->
+        <!--android:text="@string/Event"/>-->
+    <!---->
+    <!--<ImageView android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/txtLabel"-->
+        <!--android:src="@drawable/ic_people"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp"/>-->
 
     <!--<include-->
         <!--android:id="@+id/layout_navigation"-->
@@ -25,5 +123,6 @@
         <!--android:layout="@layout/layout_navigation"-->
         <!--android:layout_weight="0.08"-->
         <!--/>-->
+
 
 </RelativeLayout>

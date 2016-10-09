@@ -12,12 +12,10 @@ import innovation.tower.com.axida.util.Global;
 
 public class SplashScreen extends Activity
 {
-
-
         @Override //constructor
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.splash_screen);
         new Handler().postDelayed(new Runnable() {
 
             /*

@@ -10,4 +10,5 @@
     <color name="colorBackgroundListBottom">#494b2d</color>
     <color name="navigation_selected">#16395d</color>
     <color name="layout_white">#FFFFF0</color>
+    <color name="blue_component">#61b3ff</color>
 </resources>
